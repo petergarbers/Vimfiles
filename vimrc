@@ -234,7 +234,7 @@ if has("gui_running")
     if has("gui_gnome")
         set term=gnome-256color
         colorscheme railscasts
-        set guifont=Monospace\ Bold\ 12
+        set guifont=Inconsolata\ 13
     endif
 
     if has("gui_mac") || has("gui_macvim")
@@ -421,3 +421,21 @@ let g:user_zen_settings = {
   \  },
  \}
 
+" My own configuration
+
+"key mapping for yankring
+nnoremap <silent> <F5> :YRShow<CR>
+
+" Rails
+" open Rails model
+map <Leader>m :Rmodel
+" open Rails controller
+map <Leader>c :Rcontroller
+" open Rails view
+map <Leader>v :Rview
+
+" External copy/paste
+"vmap <C-c> "+y
+"map <C-v> "+gP<CR>
+map <Leader>. "+y<CR>
+map <Leader>; "+gP<CR>
